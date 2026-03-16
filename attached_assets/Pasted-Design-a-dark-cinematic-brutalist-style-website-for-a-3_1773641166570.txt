@@ -1,0 +1,316 @@
+Design a dark, cinematic, brutalist-style website for a 360 digital marketing agency called:
+
+The Brutal Agency
+
+The website should feel bold, disruptive, confident, and performance-driven, similar to a creative tech startup combined with a growth lab.
+
+This is not a traditional corporate agency website.
+
+The design should look like a brand that breaks marketing rules and builds high-performing digital ecosystems.
+
+Visual Style
+
+Use the following visual direction:
+
+• Dark backgrounds (black / charcoal)
+• Bright burnt orange / neon orange accents
+• Brutalist typography
+• Large kinetic headlines
+• Cinematic gradients and lighting
+• Minimal but powerful layouts
+• Motion-driven interactions
+
+Inspired by:
+
+• creative studios
+• tech startups
+• performance growth labs
+
+Design elements should include:
+
+• bold typography
+• animated scroll transitions
+• hover effects
+• animated statistics
+• interactive case studies
+
+The tone should feel like:
+
+Netflix intro + startup growth lab + underground design studio
+
+Homepage Structure
+Hero Section
+
+Headline:
+
+Marketing became predictable.
+So we broke it.
+
+Subheadline:
+
+The Brutal Agency is a 360° digital marketing and growth agency combining strategy, performance marketing, design, and content.
+
+CTA Buttons:
+
+• View Our Work
+• Start a Project
+
+Background:
+
+Cinematic gradient motion visuals or short looping video.
+
+Proof / Impact Section
+
+Large numbers with animated counters:
+
+120+
+Combined Projects
+
+4x
+Average Ad ROAS
+
+10+
+Recurring Clients
+
+Short copy:
+
+From print to digital, name it.
+We'll be on it.
+
+About Section
+
+Title:
+
+Why Brutal?
+
+Copy example:
+
+We were community builders before we were marketers.
+
+We fell in love with brands, growth, and the chaos of making things work.
+
+10+ years of combined experience later,
+we decided to do it our way.
+
+The Brutal way.
+
+Services Section
+
+Title:
+
+Our Labs
+
+Each service should appear as interactive cards or animated panels.
+
+The Brutal PerformanceLab
+
+Performance Marketing & Growth
+
+Services:
+
+• Paid Ads (Meta, Google, TikTok)
+• Growth Strategy
+• Funnel Optimization
+• Analytics & Tracking
+• Scaling campaigns
+
+Goal: measurable growth and revenue.
+
+The Brutal MotionLab
+
+Video Editing & Motion Graphics
+
+Services:
+
+• Social media video editing
+• Motion graphics
+• Brand videos
+• Ad creatives
+• YouTube content
+
+Goal: high-impact visual storytelling.
+
+The Brutal BrandLab
+
+Brand Identity & Design Systems
+
+Services:
+
+• Brand identity
+• Logo design
+• Visual systems
+• Brand guidelines
+• Packaging concepts
+
+Goal: unforgettable brand presence.
+
+The Brutal Social
+
+Content Marketing / IMC Planning / UGC
+
+Services:
+
+• Social media strategy
+• Content calendars
+• Influencer campaigns
+• UGC campaigns
+• Short-form content
+
+Goal: build cultural relevance.
+
+The Brutal WebLab
+
+Landing Pages / CRO / Webflow
+
+Services:
+
+• Landing page design
+• Webflow development
+• Conversion optimization
+• A/B testing
+• High-performance marketing sites
+
+Goal: turn traffic into conversions.
+
+The Brutal TrainingLab
+
+Trainings, Workshops, Certifications
+
+Services:
+
+• Digital marketing training
+• Graphic design workshops
+• Corporate training programs
+• Certifications
+
+Goal: build the next generation of marketers.
+
+Portfolio Section
+
+Title:
+
+Brutal Work
+
+Create a grid of case studies with cinematic visuals.
+
+Each case study should include:
+
+• Client
+• Industry
+• Challenge
+• Strategy
+• Results
+
+Display bold performance metrics like:
+
++320% ROAS
++1M Video Views
++200% Conversion Rate
+
+Each project should open into a story-driven case study page.
+
+Testimonials
+
+Create a modern testimonial section.
+
+Example:
+
+★★★★★
+
+"The Brutal Agency doesn't just execute marketing.
+They engineer growth."
+
+— Founder, Tech Company
+
+Another example:
+
+"They combine creativity with real performance marketing."
+
+— E-commerce Brand
+
+Include client logos.
+
+Process Section
+
+Title:
+
+The Brutal Method
+
+Steps:
+
+01 Strategy
+02 Creative Production
+03 Launch
+04 Optimization
+05 Scale
+
+Use animated step transitions.
+
+Training Programs Section
+
+Promote The Brutal TrainingLab.
+
+Highlight:
+
+Digital Marketing Certification
+Graphic Design Bootcamp
+Corporate Marketing Workshops
+
+Include testimonials from students.
+
+Final CTA
+
+Full-screen section.
+
+Headline:
+
+Ready to grow brutally fast?
+
+Buttons:
+
+Start a Project
+Book a Strategy Call
+
+Footer
+
+Include:
+
+Navigation
+Social links
+Contact email
+Newsletter signup
+
+Interaction Features
+
+Add:
+
+• Scroll animations
+• Interactive cursor
+• Hover distortions
+• Motion typography
+• Video backgrounds
+• Animated counters
+
+SEO Focus
+
+Optimize for:
+
+digital marketing agency
+performance marketing agency
+branding agency
+video marketing agency
+webflow development agency
+
+Tone of the Website
+
+Visitors should feel:
+
+• This agency is bold
+• This agency is modern
+• This agency delivers results
+
+Not corporate.
+
+Not safe.
+
+Brutal.
