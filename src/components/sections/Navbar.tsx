@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { BOOKING_URL } from "@/lib/links";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,7 +52,9 @@ export function Navbar() {
               ))}
             </ul>
             <a 
-              href="#contact"
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noreferrer"
               className="bg-primary text-primary-foreground px-6 py-3 font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-colors duration-300"
             >
               Start a Project
@@ -92,7 +95,9 @@ export function Navbar() {
               ))}
               <li className="mt-8">
                 <a 
-                  href="#contact"
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="bg-primary text-primary-foreground px-8 py-4 font-bold uppercase tracking-wider text-xl hover:bg-white hover:text-black transition-colors"
                 >

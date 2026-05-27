@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
+import { BOOKING_URL } from "@/lib/links";
 
 export function Hero() {
   return (
@@ -52,9 +53,11 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-6"
-          >
+            >
             <a 
-              href="#contact" 
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noreferrer"
               className="group relative inline-flex items-center justify-center px-8 py-5 bg-primary text-black font-bold uppercase tracking-widest overflow-hidden"
             >
               <span className="absolute inset-0 w-full h-full bg-white -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out" />

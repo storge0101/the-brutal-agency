@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { BOOKING_URL } from "@/lib/links";
 
 const projects = [
   {
@@ -54,7 +55,9 @@ export function Portfolio() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            href="#contact"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noreferrer"
             className="group flex items-center gap-4 text-white font-bold uppercase tracking-widest hover:text-primary transition-colors"
           >
             Start a Project

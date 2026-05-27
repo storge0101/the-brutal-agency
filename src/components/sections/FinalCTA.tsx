@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { BOOKING_URL } from "@/lib/links";
 
 export function FinalCTA() {
   return (
@@ -32,13 +33,21 @@ export function FinalCTA() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="group relative inline-flex items-center justify-center px-10 py-6 bg-primary text-black font-bold text-lg uppercase tracking-widest overflow-hidden">
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative inline-flex items-center justify-center px-10 py-6 bg-primary text-black font-bold text-lg uppercase tracking-widest overflow-hidden"
+            >
               <span className="absolute inset-0 w-full h-full bg-white -translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
               <span className="relative">Book Strategy Call</span>
-            </button>
-            <button className="px-10 py-6 border-2 border-white/20 text-white font-bold text-lg uppercase tracking-widest hover:border-white hover:bg-white hover:text-black transition-all duration-300">
+            </a>
+            <a
+              href="mailto:hello@thebrutalagency.com"
+              className="px-10 py-6 border-2 border-white/20 text-white font-bold text-lg uppercase tracking-widest hover:border-white hover:bg-white hover:text-black transition-all duration-300"
+            >
               Send an Email
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>
