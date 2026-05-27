@@ -1,0 +1,16 @@
+packages:
+  "framer-motion": "For cinematic scroll animations and kinetic typography"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility function to efficiently merge Tailwind CSS classes"
+
+images:
+  - path: "artifacts/brutal-agency/public/images/noise-texture.png"
+    description: "Subtle dark cinematic film grain noise texture on black background"
+    aspect_ratio: "16:9"
+  - path: "artifacts/brutal-agency/public/images/hero-abstract.png"
+    description: "Abstract 3D dark brutalist geometric shapes floating in void with a subtle burnt orange glow"
+    aspect_ratio: "16:9"
+
+notes:
+  - Pure frontend static site, no backend required
+  - Uses framer-motion for IntersectionObserver scroll effects
