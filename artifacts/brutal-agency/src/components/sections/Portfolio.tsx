@@ -27,7 +27,7 @@ const projects = [
     tag: "Product Launch",
   },
   {
-    client: "Personal Brand",
+    client: "Coach Edz Eugenio",
     industry: "Publishing",
     metric: "+300% Reach · +65% Book Sales",
     challenge: "Launched a personal brand on Facebook to promote and sell a book. Grew followers and reach by 300% through targeted content strategy, and drove a 65% uplift in book purchases.",
