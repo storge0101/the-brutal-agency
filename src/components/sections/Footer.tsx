@@ -1,4 +1,4 @@
-import { ArrowRight, Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
+import { ArrowRight, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 export function Footer() {
   const handleSubmit = (e: React.FormEvent) => {
@@ -40,13 +40,21 @@ export function Footer() {
           <div>
             <h4 className="font-bold uppercase tracking-widest text-white mb-6">Contact</h4>
             <ul className="space-y-4 text-muted-foreground text-sm font-medium uppercase tracking-wider">
-              <li>hello@thebrutalagency.com</li>
-              <li>+1 (800) BRUTAL-X</li>
+              <li>
+                <a href="mailto:brrrrrr@getbrutal.ph" className="hover:text-primary transition-colors">
+                  brrrrrr@getbrutal.ph
+                </a>
+              </li>
+              <li>
+                <a href="tel:+639177319457" className="hover:text-primary transition-colors">
+                  +639177319457
+                </a>
+              </li>
               <li className="pt-4 flex gap-4">
-                <a href="#" className="hover:text-primary transition-colors"><Instagram size={20} /></a>
-                <a href="#" className="hover:text-primary transition-colors"><Linkedin size={20} /></a>
-                <a href="#" className="hover:text-primary transition-colors"><Twitter size={20} /></a>
-                <a href="#" className="hover:text-primary transition-colors"><Youtube size={20} /></a>
+                <a href="https://www.instagram.com/getbrutal.ph" target="_blank" rel="noreferrer" aria-label="Instagram @getbrutal.ph" className="hover:text-primary transition-colors"><Instagram size={20} /></a>
+                <a href="https://www.facebook.com/getbrutal.ph" target="_blank" rel="noreferrer" aria-label="Facebook @getbrutal.ph" className="hover:text-primary transition-colors"><Facebook size={20} /></a>
+                <a href="https://twitter.com/getbrutal.ph" target="_blank" rel="noreferrer" aria-label="Twitter @getbrutal.ph" className="hover:text-primary transition-colors"><Twitter size={20} /></a>
+                <a href="https://www.youtube.com/@getbrutal.ph" target="_blank" rel="noreferrer" aria-label="YouTube @getbrutal.ph" className="hover:text-primary transition-colors"><Youtube size={20} /></a>
               </li>
             </ul>
           </div>
