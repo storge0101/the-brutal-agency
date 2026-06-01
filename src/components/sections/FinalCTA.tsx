@@ -8,7 +8,7 @@ export function FinalCTA() {
       <div 
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-5xl opacity-30 pointer-events-none mix-blend-screen"
         style={{ 
-          backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-abstract.png)`,
+          backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-abstract.jpg)`,
           backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'

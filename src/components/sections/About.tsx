@@ -13,7 +13,10 @@ export function About() {
       {/* Texture overlay */}
       <div 
         className="absolute inset-0 z-0 opacity-30 mix-blend-overlay pointer-events-none"
-        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/noise-texture.png)` }}
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 12% 24%, rgba(255,255,255,0.08), transparent 22%), radial-gradient(circle at 78% 72%, rgba(255,77,0,0.10), transparent 26%)",
+        }}
       />
       
       <div className="container relative z-10 mx-auto px-6">

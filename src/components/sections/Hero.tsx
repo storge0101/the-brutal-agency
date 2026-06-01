@@ -13,7 +13,10 @@ export function Hero() {
       {/* Texture overlay */}
       <div 
         className="absolute inset-0 z-0 opacity-20 mix-blend-overlay pointer-events-none"
-        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/noise-texture.png)` }}
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08), transparent 24%), radial-gradient(circle at 80% 0%, rgba(255,77,0,0.12), transparent 28%)",
+        }}
       />
 
       <div className="container relative z-10 mx-auto px-6 flex flex-col justify-center">
