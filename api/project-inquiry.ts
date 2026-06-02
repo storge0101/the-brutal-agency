@@ -17,6 +17,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     body: JSON.stringify({
       access_key: process.env.WEB3FORMS_KEY,
       subject: `New Project Inquiry from ${name} — The Brutal Agency`,
+      to: 'brrrrrr@getbrutal.ph',
       name,
       email,
       phone: phone || 'Not provided',
