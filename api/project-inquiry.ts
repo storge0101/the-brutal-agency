@@ -1,89 +1,38 @@
-type InquiryPayload = {
-  name?: string;
-  email?: string;
-  phone?: string;
-  company?: string;
-  budget?: string;
-  timeline?: string;
-  services?: string[];
-  message?: string;
-};
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function asText(value: unknown) {
-  return typeof value === "string" ? value.trim() : "";
-}
-
-function asServices(value: unknown) {
-  return Array.isArray(value)
-    ? value.filter((item): item is string => typeof item === "string")
-    : [];
-}
-
-export default async function handler(request: any, response: any) {
-  if (request.method !== "POST") {
-    return response.status(405).json({ error: "Method not allowed" });
+export default async function handler(req: VercelRequest, res: VercelResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const payload = request.body as InquiryPayload;
-
-  const name = asText(payload.name);
-  const email = asText(payload.email);
-  const phone = asText(payload.phone);
-  const company = asText(payload.company);
-  const budget = asText(payload.budget);
-  const timeline = asText(payload.timeline);
-  const message = asText(payload.message);
-  const services = asServices(payload.services);
+  const { name, email, phone, company, budget, timeline, services, message } = req.body;
 
   if (!name || !email || !message) {
-    return response
-      .status(400)
-      .json({ error: "Name, email, and project details are required." });
+    return res.status(400).json({ error: 'Please fill in name, email, and project details.' });
   }
 
-  if (!emailPattern.test(email)) {
-    return response
-      .status(400)
-      .json({ error: "Please enter a valid email address." });
-  }
-
-  const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
-
-  if (!accessKey) {
-    return response
-      .status(500)
-      .json({ error: "Lead backend is not configured yet." });
-  }
-
-  const web3FormsResponse = await fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+  const response = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      access_key: accessKey,
-      subject: "New Brutal Agency project inquiry",
-      from_name: "The Brutal Agency Website",
+      access_key: process.env.WEB3FORMS_KEY,
+      subject: `New Project Inquiry from ${name} — The Brutal Agency`,
       name,
       email,
-      phone,
-      company,
-      budget,
-      timeline,
-      services: services.join(", "),
+      phone: phone || 'Not provided',
+      company: company || 'Not provided',
+      budget: budget || 'Not specified',
+      timeline: timeline || 'Not specified',
+      services: services?.join(', ') || 'None selected',
       message,
     }),
   });
 
-  const result = await web3FormsResponse.json().catch(() => ({}));
+  const data = await response.json();
 
-  if (!web3FormsResponse.ok || result.success === false) {
-    return response
-      .status(502)
-      .json({ error: "Could not send your inquiry. Please try again." });
+  if (data.success) {
+    return res.status(200).json({ success: true });
+  } else {
+    return res.status(500).json({ error: 'Failed to send. Please try again.' });
   }
-
-  return response.status(200).json({ ok: true });
 }
