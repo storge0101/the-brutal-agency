@@ -7,6 +7,7 @@ import { Portfolio } from "@/components/sections/Portfolio";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Process } from "@/components/sections/Process";
 import { Training } from "@/components/sections/Training";
+import { LeadForm } from "@/components/sections/LeadForm";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/sections/Footer";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Testimonials />
       <Process />
       <Training />
+      <LeadForm />
       <FinalCTA />
       <Footer />
     </main>
