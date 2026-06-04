@@ -6,8 +6,10 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContact, setIsContact] = useState(false);
 
   useEffect(() => {
+    setIsContact(window.location.pathname === "/contact");
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -16,33 +18,43 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Work", href: "#work" },
-    { name: "Labs", href: "#labs" },
-    { name: "About", href: "#about" },
-    { name: "Process", href: "#process" },
+    { name: "Work", anchor: "work" },
+    { name: "Labs", anchor: "labs" },
+    { name: "About", anchor: "about" },
+    { name: "Process", anchor: "process" },
   ];
+
+  function getHref(anchor) {
+    if (isContact) {
+      return "/#" + anchor;
+    }
+    return "#" + anchor;
+  }
 
   return (
     <>
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b border-transparent",
-          isScrolled ? "bg-background/90 backdrop-blur-md border-white/10 py-4" : "bg-transparent py-6"
+          isScrolled
+            ? "bg-background/90 backdrop-blur-md border-white/10 py-4"
+            : "bg-transparent py-6"
         )}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="font-display font-black text-2xl tracking-tighter uppercase z-50">
+          <a
+            href="/"
+            className="font-display font-black text-2xl tracking-tighter uppercase z-50"
+          >
             The Brutal<span className="text-primary">.</span>Agency
           </a>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             <ul className="flex items-center gap-8">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href}
+                  <a
+                    href={getHref(link.anchor)}
                     className="text-sm font-semibold uppercase tracking-widest text-muted-foreground hover:text-white transition-colors"
                   >
                     {link.name}
@@ -50,7 +62,7 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
-            <a 
+            <a
               href="/contact"
               className="bg-primary text-primary-foreground px-6 py-3 font-bold uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-colors duration-300"
             >
@@ -58,8 +70,7 @@ export function Navbar() {
             </a>
           </nav>
 
-          {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="md:hidden z-50 text-white p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle Menu"
@@ -69,7 +80,6 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -81,8 +91,8 @@ export function Navbar() {
             <ul className="flex flex-col items-center gap-8 text-center">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href}
+                  <a
+                    href={getHref(link.anchor)}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="font-display text-4xl font-bold uppercase tracking-wider hover:text-primary transition-colors"
                   >
@@ -91,7 +101,7 @@ export function Navbar() {
                 </li>
               ))}
               <li className="mt-8">
-                <a 
+                <a
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="bg-primary text-primary-foreground px-8 py-4 font-bold uppercase tracking-wider text-xl hover:bg-white hover:text-black transition-colors"
