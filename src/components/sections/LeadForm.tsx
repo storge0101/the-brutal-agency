@@ -26,6 +26,8 @@ const timelineOptions = [
   "Still exploring",
 ];
 
+const WEB3FORMS_ACCESS_KEY = "9aee4c41-befc-4da1-91ac-cef718b748ea";
+
 type FormState = {
   name: string;
   email: string;
@@ -72,18 +74,31 @@ export function LeadForm() {
     setError("");
 
     try {
-      const response = await fetch("/api/project-inquiry", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "New Brutal Agency project inquiry",
+          from_name: "The Brutal Agency Website",
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          budget: form.budget,
+          timeline: form.timeline,
+          services: form.services.join(", "),
+          message: form.message,
+        }),
       });
 
       const result = await response.json().catch(() => ({}));
 
-      if (!response.ok) {
-        throw new Error(result.error || "Something went wrong.");
+      if (!response.ok || result.success === false) {
+        throw new Error(result.message || "Something went wrong.");
       }
 
       setStatus("success");
