@@ -6,6 +6,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Contact from "@/pages/Contact";
 import Work from "@/pages/Work";
+import TnaForm from "@/pages/TnaForm";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/work" component={Work} />
       <Route path="/contact" component={Contact} />
+      <Route path="/ai-training-needs-analysis-2026" component={TnaForm} />
       <Route component={NotFound} />
     </Switch>
   );

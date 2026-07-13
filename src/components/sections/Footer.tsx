@@ -1,6 +1,14 @@
 import { ArrowRight, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 export function Footer() {
+  const navLinks = [
+    { label: "Work", href: "/work" },
+    { label: "Labs", href: "/#labs" },
+    { label: "About", href: "/#about" },
+    { label: "Process", href: "/#process" },
+    { label: "Careers", href: "/#careers" },
+  ];
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Dummy submit
@@ -26,10 +34,10 @@ export function Footer() {
           <div>
             <h4 className="font-bold uppercase tracking-widest text-white mb-6">Navigation</h4>
             <ul className="space-y-4">
-              {['Work', 'Labs', 'About', 'Process', 'Careers'].map((link) => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase()}`} className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium uppercase tracking-wider">
-                    {link}
+              {navLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium uppercase tracking-wider">
+                    {link.label}
                   </a>
                 </li>
               ))}

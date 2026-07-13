@@ -65,7 +65,7 @@ export function Hero() {
             </a>
             
             <a 
-              href="#work" 
+              href="/work" 
               className="group inline-flex items-center justify-center px-8 py-5 border-2 border-white/20 text-white font-bold uppercase tracking-widest hover:border-white transition-colors duration-300"
             >
               View Our Work

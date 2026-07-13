@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { Stats } from "@/components/sections/Stats";
@@ -12,6 +13,12 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
+  useEffect(() => {
+    if (window.location.hash === "#work") {
+      window.location.replace("/work");
+    }
+  }, []);
+
   return (
     <main className="bg-background min-h-screen text-foreground selection:bg-primary selection:text-black">
       <Navbar />
