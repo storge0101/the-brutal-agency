@@ -3,10 +3,11 @@ import { ArrowRight, Facebook, Instagram, Twitter, Youtube } from "lucide-react"
 export function Footer() {
   const navLinks = [
     { label: "Work", href: "/work" },
+    { label: "Blog", href: "/blog" },
     { label: "Labs", href: "/#labs" },
     { label: "About", href: "/#about" },
     { label: "Process", href: "/#process" },
-    { label: "Careers", href: "/#careers" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -93,8 +94,8 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/10 text-xs text-muted-foreground uppercase tracking-widest font-semibold">
           <p>&copy; {new Date().getFullYear()} The Brutal Agency. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="/contact" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/contact" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

@@ -20,6 +20,7 @@ export function Navbar() {
   const navLinks = [
     { name: "Work", href: "/work" },
     { name: "Labs", href: isInternalPage ? "/#labs" : "#labs" },
+    { name: "Blog", href: "/blog" },
     { name: "About", href: isInternalPage ? "/#about" : "#about" },
     { name: "Process", href: isInternalPage ? "/#process" : "#process" },
   ];
