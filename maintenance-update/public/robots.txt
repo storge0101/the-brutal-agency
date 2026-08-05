@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /ai-training-needs-analysis-2026
+
+Sitemap: https://www.getbrutal.ph/sitemap.xml
