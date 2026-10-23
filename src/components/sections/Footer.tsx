@@ -26,9 +26,22 @@ export function Footer() {
             <h3 className="font-display font-black text-3xl uppercase tracking-tighter mb-6">
               The Brutal<span className="text-primary">.</span><br/>Agency
             </h3>
-            <p className="text-muted-foreground text-sm uppercase tracking-widest font-semibold">
-              We break rules.<br/>We build brands.
+            <p className="text-muted-foreground text-sm uppercase tracking-wide">
+              We break rules.<br />We build brands.
             </p>
+
+            <div className="mt-8">
+              <p className="text-muted-foreground text-[10px] uppercase tracking-[0.2em]">
+                Registered business
+              </p>
+
+              <img
+                src="/images/bir-seal-badge.jpg"
+                alt="Bureau of Internal Revenue registered business seal"
+                loading="lazy"
+                className="w-full max-w-[320px] h-auto object-contain"
+              />
+            </div>
           </div>
 
           {/* Nav Links */}
